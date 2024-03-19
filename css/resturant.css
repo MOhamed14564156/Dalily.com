@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.sec1 {
+    background-color: rgb(255, 255, 255);
+    height: 80vh;
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+}
+
+.dark .sec1 {
+    background-color: rgba(26, 26, 26, 0.948);
+    color: aliceblue;
+}
+
+.sec1 h1 {
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50px, -50px);
+    animation: myAnim 3s ease 0s 1 normal forwards;
+    -webkit-animation: myAnim 3s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    38% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    55% {
+        animation-timing-function: ease-in;
+        transform: scale(0.7);
+    }
+
+    72% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+    }
+
+    81% {
+        animation-timing-function: ease-in;
+        transform: scale(0.84);
+    }
+
+    89% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+    }
+
+    95% {
+        animation-timing-function: ease-in;
+        transform: scale(0.95);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+    }
+}
+
+@media(max-width:767px) {
+    .sec1 h1 {
+        font-size: 45px;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50px, -50px);
+    }
+}

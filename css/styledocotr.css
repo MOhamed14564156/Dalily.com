@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #eaebeb;
+}
+
+.dark {
+  background: #000;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+h1 {
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+h2 {
+  position: relative;
+  top: 80px;
+  z-index: 1;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+
+.container a {
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 90%;
+  height: 90px;
+  padding: 0 20px;
+  margin: 86px 0px 20px 0px;
+  box-shadow: 3px 8px 13px 3px #9b9b9b;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+@media(max-width:767px) {
+  .header h1 {
+    font-size: 30px !important;
+  }
+}
+
+.header .logoo {
+  font-size: 50px;
+  color: #091036;
+  margin-left: 18px;
+}
+
+.dark .header .logoo {
+  color: #ffffff;
+}
+
+
+.container {
+  border-top: 1px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  width: 90%;
+  gap: 30px 40px;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 2px 1px 16px 6px #0000008f;
+}
+
+
+
+.dark .container,
+h2,
+h3,
+a {
+  color: #fff;
+}
+
+.dark .container {
+  box-shadow: 0px 3px 16px 4px #444444;
+
+}
+
+.dark .header {
+  background-color: #272727;
+  color: #fff !important;
+  box-shadow: 0px 3px 16px 4px #444444;
+
+}
+
+.container .drop {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05), 25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05), inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+}
+
+.container .drop,
+.drop::after {
+  border-radius: 28% 72% 70% 30% / 49% 50% 50% 51%;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+}
+
+.container .drop:hover {
+  border-radius: 70%;
+  -webkit-border-radius: 70%;
+  -moz-border-radius: 70%;
+  -ms-border-radius: 70%;
+  -o-border-radius: 70%;
+}
+
+.drop:hover::after {
+  border-radius: 70%;
+  -webkit-border-radius: 70%;
+  -moz-border-radius: 70%;
+  -ms-border-radius: 70%;
+  -o-border-radius: 70%;
+}
+
+
+.container .drop.dark {
+
+  box-shadow: inset 20px 20px 20px rgba(255, 255, 255, 0.05),
+    25px 35px 20px rgba(255, 255, 255, 0.05),
+    25px 30px 30px rgba(255, 255, 255, 0.05),
+    inset -20px -20px 25px rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+
+.container .drop.dark::before {
+  background: black;
+}
+
+.container .drop.dark::after {
+  background: black;
+}
+
+.title.dark {
+  color: #fff;
+}
+
+a {
+  display: block;
+}
+
+
+
+.search-bar {
+  position: relative;
+  background: #eff9f4;
+  /* background: #fff; */
+  width: 550px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -6px -6px 10px rgba(255, 255, 255, 0.7);
+  transition: width 1s;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0px;
+  cursor: pointer;
+  width: 40px;
+}
+
+.mic-icon {
+  width: 50px;
+  position: absolute;
+  right: 10px;
+}
+
+input {
+  border: none;
+  outline: none;
+  margin: 20px 50px;
+  font-size: 16px;
+  height: 24px;
+  width: 100%;
+  background: none;
+}
+
+.inactive.search-bar {
+  width: 64px;
+}
+
+.inactive input,
+.inactive .mic-icon {
+  width: 0;
+}
+
+@media (width<768px) {
+  .search-bar {
+    width: 75vw;
+  }
+}
+
+
+.drop-2 {
+  background-image: url("../images/0445fbf9-7d6a-4419-9ddd-a88284ef79ec.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.drop-2 .mr {
+  color: #000;
+}
+
+.dark .mr {
+  color: #eff9f4;
+}
+
+
+@media(max-width:767px) {
+  .header {
+    max-width: 100%;
+  }
+
+  .header h1 {
+    font-size: 54px;
+    padding: 10px;
+    letter-spacing: 0;
+  }
+
+}
+
+.up {
+  position: fixed;
+  top: 80%;
+  right: 13px;
+  background: #272727;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+  font-size: 25px;
+  z-index: 55;
+}
+
+.btna {
+  background-image: url("../images/8.svg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.drop::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #0000006a;
+}
+
+.asnan {
+  background-image: url("../images/Template2023-Recovered-03.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.brain {
+  background-image: url("../images/افضل-دكتور-مخ-واعصاب-في-الإسكندرية-2024.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.babe {
+  background-image: url("../images/قائمة-بأهم-مستشفيات-الأطفال-في-القاهرة-والجيزة.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bones {
+  background-image: url("../images/bones-surgery.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.eyes {
+  background-image: url("../images/article-j61HcSyCUZ3G.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.anf {
+  background-image: url("../images/pasted\ image\ 0.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.socials li {
+  margin: 0 20px;
+}
+
+footer .footer-bottom p span {
+  display: inline-block;
+}
